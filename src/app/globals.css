@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .form-cadastro {
+        @apply grid items-center md:grid-cols-2 md:gap-5;
+    }
+
+    .form-cadastro div label {
+        @apply block font-semibold text-curious-blue-500 mb-2 mt-4 text-sm/4 md:text-base antialiased;
+    }
+
+    .form-cadastro div > input {
+        @apply w-full p-2 border border-curious-blue-400 rounded-lg focus:shadow-lg focus:text-black placeholder:text-sm/3 focus:outline-curious-blue-400;
+        
+    }
+
+    .form-login {
+        @apply grid items-center md:grid-cols-1 md:gap-5;
+    }
+
+    .form-login div label {
+        @apply block font-semibold text-curious-blue-400 mb-2 mt-4 text-sm/4 md:text-base antialiased;
+    }
+
+    .form-login div > input {
+        @apply text-white w-full p-2 border border-curious-blue-400 rounded-lg bg-transparent focus:shadow-lg focus:text-white placeholder:text-sm/3 focus:outline-none;
+        
+    }
+
+    .botao {
+        @apply font-semibold bg-curious-blue-600 hover:bg-curious-blue-400 hover:shadow-sm text-white text-sm py-1 px-4 rounded-lg float-right md:text-base;
+    }
+}
+
