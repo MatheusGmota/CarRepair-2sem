@@ -52,7 +52,7 @@ export function FormularioCadastro () {
                 <label>E-mail</label>
                 <input
                     name="email" 
-                    type="text"
+                    type="email"
                     id="idEmail"
                     placeholder="Digite seu email"
                     required/>
