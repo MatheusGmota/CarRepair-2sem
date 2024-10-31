@@ -4,26 +4,66 @@
 
 @layer components{
     .main{
-        @apply flex flex-col gap-y-6 justify-center items-center row-start-2 min-w-full min-h-full p-6;
+        @apply flex flex-col gap-y-6 justify-center items-center row-start-2 min-w-full min-h-full p-6 lg:gap-y-20;
     }
 
     .titulo-home{
-        @apply font-black text-2xl;
+        @apply font-black text-2xl lg:text-3xl;
     }
     
     .secao-home{
-        @apply text-white flex flex-col gap-y-2 w-full; 
+        @apply text-white flex flex-col gap-y-2 w-full lg:w-11/12 lg:gap-y-7;  
 
         & .texto-home{
             @apply font-light flex flex-col items-center;
 
            & .texto{
-               @apply w-11/12 text-justify text-lg;
+               @apply w-11/12 text-justify text-lg lg:text-2xl lg:w-10/12;
             }
         }
 
         & .botao-home{
-            @apply bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded
+            @apply bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded;
         }
+    }
+
+    .input-contact{
+        @apply w-full p-3 bg-transparent text-gray-300 border border-curious-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
+
+    .secao-form{
+        @apply text-white w-full flex flex-col gap-y-3;
+    }
+
+    .aside-inputs{
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+    }
+
+    .label-inputs{
+        @apply block mb-2;
+    }
+
+    .botao-form{
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded
+    }
+
+    .section-cards{
+        @apply text-white w-full flex flex-col gap-y-3 lg:w-11/12 ;
+    }
+
+    .article-cards{
+        @apply flex flex-col gap-y-4 items-center lg:flex lg:flex-row lg:gap-x-5;
+    }
+
+    .card{
+        @apply bg-bunker rounded-lg p-10 flex flex-col items-center w-3/4 lg:h-72;
+    }
+
+    .span{
+        @apply text-white font-medium text-2xl;
+    }
+
+    .svg-card{
+        @apply w-20 h-20 text-bright-turquoise-300 mb-4;
     }
 }

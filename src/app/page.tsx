@@ -45,28 +45,52 @@ export default function AboutPage() {
                 </p>
             </article>
         </section>
-        <section className="text-white w-full flex flex-col gap-y-3">
+        <section className="section-cards">
+            <h2 className="titulo-home">Ferramentas</h2>
+            <article className="article-cards">
+                <div className="card">
+                    <svg className="svg-card" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5 3.6 9.9 9 11 5.4-1.1 9-6 9-11V5l-9-4zM12 12.5c-1.5 0-2.5-1-2.5-2.5S10.5 7.5 12 7.5s2.5 1 2.5 2.5S13.5 12.5 12 12.5z"></path>
+                    </svg>
+                    <span className="span">Orçamento</span>
+                </div>
+                <div className="card">
+                    <svg className="svg-card" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.4 7l-2.4 2.4-3.1-.7L10.8 13 8 10.2 13.3 5 12 3.6 7.7 7.9 3.6 6.6 2 8.2l4.3 4.3c-.2 1.2.1 2.4.8 3.3L5.5 19 9 21.5l3.2-1.3c.9.7 2.1 1 3.3.8l4.3 4.3 1.6-1.6-1.3-4.1L19.4 7z"></path>
+                    </svg>
+                    <span className="span">Mecânicas</span>
+                </div>
+                <div className="card">
+                    <svg className="svg-card" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm5 4h8v2H8v-2zm0 4h5v2H8v-2zm8 0h2v2h-2v-2zm-4-4h5v2h-5v-2zm4-4h2v2h-2V7zm-4 0h5v2h-5V7zm0 4h8v2h-8v-2z"></path>
+                    </svg>
+                    <span className="span">Agendamento</span>
+                </div>
+            </article>
+        </section>
+        <section className="secao-form">
             <h2 className="titulo-home">Contate-nos</h2>
             <form className="space-y-4">
-                <aside className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <aside className="aside-inputs">
                     <div>
-                        <label className="block mb-2">Nome</label>
-                        <input type="text" id="name" placeholder="Digite seu nome" className="w-full p-3 bg-transparent text-gray-300 border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                        <label className="label-inputs">Nome</label>
+                        <input type="text" id="name" placeholder="Digite seu nome" className="input-contact"/>
                     </div>
                     <div>
-                        <label className="block mb-2">Email</label>
-                        <input type="email" id="email" placeholder="Digite seu email" className="w-full p-3 bg-transparent text-gray-300 border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                        <label className="label-inputs">Email</label>
+                        <input type="email" id="email" placeholder="Digite seu email" className="input-contact"/>
                     </div>
                 </aside>
                 <div>
-                    <label className="block mb-2">Mensagem</label>
-                    <textarea id="message" placeholder="Escreva sua mensagem" className="w-full h-32 p-3 bg-transparent text-gray-300 border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <label className="label-inputs">Mensagem</label>
+                    <textarea id="message" placeholder="Escreva sua mensagem" className="input-contact"></textarea>
                 </div>
                 <div className="text-right">
-                    <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded">Enviar</button>
+                    <button type="submit" className="botao-form">Enviar</button>
                 </div>
             </form>
         </section>
+        
       </main>
     </>
   )
