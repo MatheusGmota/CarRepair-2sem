@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .menu {
+        @apply md:flex md:items-center md:z-auto gap-10;
+        
+        & li{
+            @apply text-white hover:underline hover:text-sky-400 my-6 md:my-0;
+        }
+    }
+    
+    .botao {
+        @apply font-semibold bg-curious-blue-600 hover:bg-curious-blue-400 hover:shadow-sm text-white text-sm py-1 px-4 rounded-lg float-right md:text-base;
+    }
+}
