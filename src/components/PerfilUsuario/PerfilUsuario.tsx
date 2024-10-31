@@ -1,18 +1,34 @@
-import Link from "next/link"
+'use client'
+import { obterUsuario } from "@/app/lib/dal"
+import { TipoCliente } from "@/types"
+import { useEffect, useState } from "react"
 
-export const PerfilUsuario = ({className}: {className: string | ""}) => {
-    const user = null
-    if(!user) {
-        return (
-            <div className={`${className} flex flex-col w-auto md:flex md:flex-row md:items-center md:z-auto gap-5`}>
-                <Link className="text-curious-blue-500 transition hover:underline md:hover:scale-105" href="/cadastrar">Cadastre-se</Link>
-                <Link className="botao text-center" href="/entrar">Entrar</Link>
-            </div>
-        )
-    } else {
-        return (
-            <div className={`${className}`}>
-            </div>
-        )
-    }
+export const PerfilUsuario = () => {
+    
+    const [usuario, setUsuario] = useState<TipoCliente>({
+        nome: "",
+        tipoDocumento: "cpf",
+        numeroDocumento: 0,
+        email: "",
+        telefone: 0,
+        login: {
+            usuario: "",
+            senha: ""
+        }
+    })
+
+    useEffect(() => {
+        const verificarSessao = async () => {
+            const user = await obterUsuario()
+            setUsuario(user)
+        }
+        
+        verificarSessao()
+    },[])
+
+    return (
+        <div>
+            <p>{usuario.nome}</p>
+        </div>
+    )
 }
