@@ -57,7 +57,7 @@ export async function pegaVeiculo (request: Request, { params } : {params: {user
     }
 
     try {
-        const response = await fetch(`http://localhost:8080/carrepair/orcamento/${usuario.userId}`,
+        const response = await fetch(`http://localhost:3000/carrepair/orcamento?${usuario.userId}&idVeiculo={}`,
             {
                 method: "GET",
                 headers: {

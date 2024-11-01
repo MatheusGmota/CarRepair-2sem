@@ -5,7 +5,7 @@ import { useActionState } from "react"
 
 export default function FormOrcamento() {
 
-    const [state, action] = useActionState(cadVeiculo, undefined)
+    const [state, action] = useActionState(cadVeiculo, undefined);
 
     return (
         <>

@@ -1,7 +1,11 @@
 "use client"
 
+import { pegaVeiculo } from "@/app/actions/orcamento"
+import { useState } from "react"
+
 export default function OrcamentoFinal({ params }: { params: number }) {
 
+    const [veiculo] = useState(pegaVeiculo);
 
     return (
         <main className="main">
@@ -11,7 +15,7 @@ export default function OrcamentoFinal({ params }: { params: number }) {
                 <div className="flex flex-col md:hidden">
                     <div className="linha">
                         <p>Marca</p>
-                        <p>xxxx</p>
+                        <p>{veiculo.}</p>
                     </div>
                     <div className="linha">
                         <p>Modelo</p>
