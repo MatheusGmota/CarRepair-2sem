@@ -3,14 +3,19 @@
 import FormOrcamento from "@/components/FormOrcamento/FormOrcamento"
 import OrcamentoDashboard from "@/components/OrcamentoDashboard/OrcamentoDashboard"
 import { useEffect, useState } from "react"
+import { obterOrcamento } from "../lib/dal"
+
+const orc = await obterOrcamento()
 
 export default function Orcamento() {
 
     const [passo, setPasso] = useState<number>(1)
 
     useEffect(() =>{
-        setPasso(2)
-    }, [])
+        if(orc){
+            setPasso(2)
+        }
+    }, [orc])
     
     if (passo === 1) {
         return (
