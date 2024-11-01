@@ -33,7 +33,12 @@ body {
     }
 
     .button-orcamento {
-        @apply text-lg text-white float-right flex justify-center w-40 bg-curious-blue-500 py-1.5 rounded-md self-end mt-8 mb-2
+        @apply text-base md:text-lg text-white float-right flex justify-center w-40 bg-curious-blue-500 py-1.5 rounded-md self-end mt-8 mb-2
+        hover:bg-curious-blue-600 md:hover:scale-105 hover:font-medium;
+    }
+
+    .button{
+        @apply text-base md:text-lg text-white float-right flex justify-center w-32 md:w-40 bg-curious-blue-500 py-1.5 rounded-md self-end mt-8 mb-2
         hover:bg-curious-blue-600 md:hover:scale-105 hover:font-medium;
     }
     
@@ -43,7 +48,7 @@ body {
             @apply text-sm border border-curious-blue-500 rounded-xl h-12 md:w-80 lg:w-96 bg-transparent p-4 outline-none placeholder:text-sm mx-5;
         }
         & label{
-            @apply ml-5 mt-5 text-base block my-2 text-curious-blue-500;
+            @apply ml-5 mt-2 text-base block my-2 text-curious-blue-500;
         }
         & .descricao{
             @apply text-sm border border-curious-blue-500 rounded-xl h-32 bg-transparent p-4 outline-none placeholder:text-sm mx-5;
@@ -51,6 +56,12 @@ body {
     }
 
     .orcamento{
-        @apply w-auto bg-zinc-900 h-auto flex flex-col p-5 content-center rounded-lg;
+        @apply w-80 md:w-auto bg-zinc-900 h-auto flex flex-col p-5 content-center rounded-lg;
+        .linha{
+            @apply flex justify-between border-b border-white p-4;
+        }
+        .tabela{
+            @apply hidden md:block justify-center items-center mt-10 divide-y w-auto h-96;
+        }
     }
 }
