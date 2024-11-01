@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 import { verificarSessao } from "../lib/dal";
 import { FormState } from "../lib/definitions";
-import { promises as fs } from "fs";
 
 export async function cadVeiculo(state: FormState, formData: FormData) {
 
@@ -47,21 +46,4 @@ export async function cadVeiculo(state: FormState, formData: FormData) {
     } catch (e) {
         console.error(e);
     }
-
 }
-
-// export async function pegaVeiculo (state: FormState, formData: FormData){
-//     const usuario = await verificarSessao();
-//     if (!usuario) {
-//         redirect('/entrar')
-//     }
-
-//     try {
-//         const orcamento = await sessionStorage.json()
-//         sessionStorage.setItem("orcamento", JSON.stringify(orcamento));
-
-//         const orcamentoFinal = JSON.parse(sessionStorage.getItem("orcamento") || '{}');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }

@@ -1,13 +1,24 @@
 "use client"
 
 import FormOrcamento from "@/components/FormOrcamento/FormOrcamento"
+import OrcamentoDashboard from "@/components/OrcamentoDashboard/OrcamentoDashboard"
+import { useEffect, useState } from "react"
 
 export default function Orcamento() {
 
-    return (
-        <main className="main">
-            <h1 className="text-white text-4xl mb-8">Orçamento</h1>
+    const [passo, setPasso] = useState<number>(1)
+
+    useEffect(() =>{
+        setPasso(2)
+    }, [])
+    
+    if (passo === 1) {
+        return (
             <FormOrcamento />
-        </main>
-    )
+        )
+    } else if (passo === 2) {
+        return (
+            <OrcamentoDashboard/>
+        )
+    }
 }
