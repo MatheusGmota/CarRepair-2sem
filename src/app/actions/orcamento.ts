@@ -50,28 +50,18 @@ export async function cadVeiculo(state: FormState, formData: FormData) {
 
 }
 
-export async function pegaVeiculo (request: Request, { params } : {params: {userId: number}}){
-    const usuario = await verificarSessao();
-    if (!usuario) {
-        redirect('/entrar')
-    }
+// export async function pegaVeiculo (state: FormState, formData: FormData){
+//     const usuario = await verificarSessao();
+//     if (!usuario) {
+//         redirect('/entrar')
+//     }
 
-    try {
-        const response = await fetch(`http://localhost:3000/carrepair/orcamento?${usuario.userId}&idVeiculo={}`,
-            {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }
-        );
-        if (response.status == 400) {
-            return { message: "Erro ao cadastrar veículo" }
-        }
+//     try {
+//         const orcamento = await sessionStorage.json()
+//         sessionStorage.setItem("orcamento", JSON.stringify(orcamento));
 
-        const orcamento = await response.json()
-        sessionStorage.setItem("orcamento", JSON.stringify(orcamento));
-    } catch (e) {
-        console.log(e);
-    }
-}
+//         const orcamentoFinal = JSON.parse(sessionStorage.getItem("orcamento") || '{}');
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }

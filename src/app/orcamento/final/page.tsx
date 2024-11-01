@@ -1,11 +1,29 @@
 "use client"
 
-import { pegaVeiculo } from "@/app/actions/orcamento"
-import { useState } from "react"
+import { obterOrcamento } from "@/app/lib/dal";
+import { useEffect, useState } from "react";
 
-export default function OrcamentoFinal({ params }: { params: number }) {
+const obterOrc = await obterOrcamento();
 
-    const [veiculo] = useState(pegaVeiculo);
+export default function OrcamentoFinal({ params }: { params: string }) {
+
+    const [orcamento, setOrcamento] = useState<TipoOrcamento>({
+        veiculo:{
+            marca: "",
+            modelo: "",
+            ano: 0,
+            quilometragem: 0,
+            diagnostico: {
+                descricaoProblema: ""
+            }
+        },
+        possivelReparo: "",
+        valorTotal: 0
+    })
+
+    useEffect(() => {
+        setOrcamento(obterOrc);
+    }, []);
 
     return (
         <main className="main">
@@ -15,27 +33,27 @@ export default function OrcamentoFinal({ params }: { params: number }) {
                 <div className="flex flex-col md:hidden">
                     <div className="linha">
                         <p>Marca</p>
-                        <p>{veiculo.}</p>
+                        <p>{orcamento.veiculo.marca}</p>
                     </div>
                     <div className="linha">
                         <p>Modelo</p>
-                        <p>xxxx</p>
+                        <p>{orcamento.veiculo.modelo}</p>
                     </div>
                     <div className="linha">
                         <p>Ano</p>
-                        <p>xxxx</p>
+                        <p>{orcamento.veiculo.ano}</p>
                     </div>
                     <div className="linha">
                         <p>Quilometragem</p>
-                        <p>xxxx</p>
+                        <p>{orcamento.veiculo.quilometragem}</p>
                     </div>
                     <div className="linha">
                         <p>Descrição</p>
-                        <p>xxxx</p>
+                        <p>{orcamento.veiculo.diagnostico.descricaoProblema}</p>
                     </div>
                     <div className="flex justify-between mt-4">
                         <p>Orçamento</p>
-                        <p>R$xxxx,xx</p>
+                        <p>R${orcamento.valorTotal}</p>
                     </div>
                 </div>
                 <table className="tabela">
@@ -50,17 +68,17 @@ export default function OrcamentoFinal({ params }: { params: number }) {
                     </thead>
                     <tbody className="h-14 md:h-20">
                         <tr>
-                            <td className="text-lg">xxxx</td>
-                            <td className="text-lg">xxxx</td>
-                            <td className="text-lg">xxxx</td>
-                            <td className="text-lg">xxxx</td>
-                            <td className="text-lg">xxxx</td>
+                            <td className="text-lg">{orcamento.veiculo.marca}</td>
+                            <td className="text-lg">{orcamento.veiculo.modelo}</td>
+                            <td className="text-lg">{orcamento.veiculo.ano}</td>
+                            <td className="text-lg">{orcamento.veiculo.quilometragem}</td>
+                            <td className="text-lg">{orcamento.veiculo.diagnostico.descricaoProblema}</td>
                         </tr>
                     </tbody>
                     <tfoot className="h-14 md:h-20">
                         <tr>
                             <td colSpan={4} className="text-xl">Orçamento Final :</td>
-                            <td colSpan={1} className="text-xl text-end">R$xxxx,xx</td>
+                            <td colSpan={1} className="text-xl text-end">R${orcamento.valorTotal}</td>
                         </tr>
                     </tfoot>
                 </table>
