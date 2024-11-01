@@ -16,25 +16,26 @@ export default function FormOrcamento() {
                         <label>
                             Marca
                         </label>
-                        <input name="marca" type="text" placeholder="Ex: GM Crecholet" className="campos"/>
+                        <p>{state?.message && state.message}</p>
+                        <input required name="marca" type="text" placeholder="Ex: GM Crecholet" className="campos"/>
                     </fieldset>
                     <fieldset className="flex flex-col gap-2">
                         <label className="text-base block my-2 text-curious-blue-500">
                             Modelo
                         </label>
-                        <input name="modelo" type="text" placeholder="Ex: Prisma" className="campos"/>
+                        <input required name="modelo" type="text" placeholder="Ex: Prisma" className="campos"/>
                     </fieldset>
                     <fieldset className="flex flex-col gap-2">
                         <label>
                             Ano
                         </label>
-                        <input name="ano" type="text" placeholder="XXXX" className="campos"/>
+                        <input required name="ano" type="text" placeholder="XXXX" className="campos"/>
                     </fieldset>
                     <fieldset className="flex flex-col gap-2">
                         <label>
                         Quilometragem
                         </label>
-                        <input name="quilometragem" type="text" placeholder="Ex: 10000" className="campos"/>
+                        <input required name="quilometragem" type="text" placeholder="Ex: 10000" className="campos"/>
                     </fieldset>
                 </div>
                 <div>

@@ -45,7 +45,7 @@ body {
     .formulario{
         @apply w-auto bg-zinc-900 h-auto flex flex-col p-5 content-center rounded-lg;
         & .campos{
-            @apply text-sm border border-curious-blue-500 rounded-xl h-12 md:w-80 lg:w-96 bg-transparent p-4 outline-none placeholder:text-sm mx-5;
+            @apply text-sm text-white border border-curious-blue-500 rounded-xl h-12 md:w-80 lg:w-96 bg-transparent p-4 outline-none placeholder:text-sm mx-5;
         }
         & label{
             @apply ml-5 mt-2 text-base block my-2 text-curious-blue-500;

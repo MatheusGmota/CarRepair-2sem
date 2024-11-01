@@ -13,7 +13,5 @@ export const obterOrcamento = async () => {
 
     const orcamento = JSON.parse(sessao)
 
-    const {marca, modelo, ano, quilometragem, descricaoProblema, valorTotal} = orcamento
-
-    return {...orcamento}
+    return orcamento
 }
