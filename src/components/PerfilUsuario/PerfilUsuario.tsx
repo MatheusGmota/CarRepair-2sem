@@ -4,6 +4,7 @@ import { TipoCliente } from "@/types"
 import { useEffect, useState } from "react"
 import BotaoLogout from "../BotaoLogout/BotaoLogout"
 import { maskCPF, maskPhone } from "@/app/lib/util"
+import NotFound from "@/app/not-found"
 
 export const PerfilUsuario = () => {
     
@@ -27,6 +28,8 @@ export const PerfilUsuario = () => {
         
         verificarSessao()
     },[])
+    
+    if (!usuario) return (<NotFound/>)
 
     return (
         <div className="w-full">
