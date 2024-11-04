@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .main-section{
+        @apply text-center flex flex-col gap-y-8;
+    }
+
+    .title{
+        @apply text-2xl font-semibold mb-8;
+    }
+
+    .cards-section{
+        @apply flex flex-wrap justify-center gap-8;
+    }
+
+    .card{
+        @apply bg-white text-gray-900 rounded-lg shadow-md p-6 w-64;
+    }
+
+    .card-section{
+        @apply flex flex-col items-center;
+    }
+
+    .foto{
+        @apply w-auto h-auto bg-gray-300 rounded-full mb-4
+    }
+
+    .nome{
+        @apply text-lg font-semibold text-blue-500
+    }
+
+
+    .link-github{
+        @apply hover:underline mt-8 text-white;
+    }
+}
