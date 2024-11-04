@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>
+      <body className="bg-black-russian grid grid-rows-[6.3em_1fr_50px] items-center justify-items-center min-h-screen">
         {children}
       </body>
     </html>
