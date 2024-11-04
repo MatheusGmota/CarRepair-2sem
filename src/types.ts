@@ -21,5 +21,6 @@ export type TipoCliente = {
     telefone: number;
     login?: {
         usuario: string,
-        senha: string
+        senha: string,
     }
+}
