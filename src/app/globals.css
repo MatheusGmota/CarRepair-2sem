@@ -35,6 +35,10 @@
         @apply text-white w-full flex flex-col gap-y-3;
     }
 
+    .form{
+        @apply space-y-4 lg:w-3/4
+    }
+
     .aside-inputs{
         @apply grid grid-cols-1 md:grid-cols-2 gap-4;
     }
@@ -52,11 +56,11 @@
     }
 
     .article-cards{
-        @apply flex flex-col gap-y-4 items-center lg:flex lg:flex-row lg:gap-x-5;
+        @apply flex flex-col gap-y-4 items-center lg:flex lg:flex-row lg:justify-center lg:gap-x-32;
     }
 
     .card{
-        @apply bg-bunker rounded-lg p-10 flex flex-col items-center w-3/4 lg:h-72;
+        @apply bg-bunker rounded-lg p-10 flex flex-col items-center w-3/4 lg:h-80 lg:w-64 lg:justify-center lg:gap-y-8;
     }
 
     .span{
@@ -64,6 +68,6 @@
     }
 
     .svg-card{
-        @apply w-20 h-20 text-bright-turquoise-300 mb-4;
+        @apply w-20 h-20 text-bright-turquoise-300 mb-4 lg:w-28 lg:h-28;
     }
 }

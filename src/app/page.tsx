@@ -70,27 +70,28 @@ export default function AboutPage() {
         </section>
         <section className="secao-form">
             <h2 className="titulo-home">Contate-nos</h2>
-            <form className="space-y-4">
-                <aside className="aside-inputs">
+            <section className="lg:flex lg:justify-center">
+                <form className="form">
+                    <aside className="aside-inputs">
+                        <div>
+                            <label className="label-inputs">Nome</label>
+                            <input type="text" id="name" placeholder="Digite seu nome" className="input-contact"/>
+                        </div>
+                        <div>
+                            <label className="label-inputs">Email</label>
+                            <input type="email" id="email" placeholder="Digite seu email" className="input-contact"/>
+                        </div>
+                    </aside>
                     <div>
-                        <label className="label-inputs">Nome</label>
-                        <input type="text" id="name" placeholder="Digite seu nome" className="input-contact"/>
+                        <label className="label-inputs">Mensagem</label>
+                        <textarea id="message" placeholder="Escreva sua mensagem" className="input-contact"></textarea>
                     </div>
-                    <div>
-                        <label className="label-inputs">Email</label>
-                        <input type="email" id="email" placeholder="Digite seu email" className="input-contact"/>
+                    <div className="text-right">
+                        <button type="submit" className="botao-form">Enviar</button>
                     </div>
-                </aside>
-                <div>
-                    <label className="label-inputs">Mensagem</label>
-                    <textarea id="message" placeholder="Escreva sua mensagem" className="input-contact"></textarea>
-                </div>
-                <div className="text-right">
-                    <button type="submit" className="botao-form">Enviar</button>
-                </div>
-            </form>
+                </form>
+            </section>
         </section>
-        
       </main>
     </>
   )
