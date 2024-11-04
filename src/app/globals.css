@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+
+@layer components {
+    .menu {
+        @apply md:flex md:items-center md:z-auto gap-10;
+        
+        & li{
+            @apply text-white hover:underline hover:text-sky-400 my-6 md:my-0;
+        }
+    }
+    
+    .botao {
+        @apply font-semibold bg-curious-blue-600 hover:bg-curious-blue-400 hover:shadow-sm text-white text-sm py-1 px-4 rounded-lg float-right md:text-base;
+
     .main{
         @apply flex flex-col gap-y-6 justify-center items-center row-start-2 min-w-full min-h-full p-6 lg:gap-y-20;
     }
