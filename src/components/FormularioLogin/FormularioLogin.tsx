@@ -1,10 +1,10 @@
 'use client'
 import { entrar } from "@/app/actions/auth"
-import { useFormState } from "react-dom"
+import { useActionState } from "react"
 
 export const FormularioLogin = () => {
 
-    const [state, action] = useFormState(entrar, undefined)
+    const [state, action] = useActionState(entrar, undefined)
 
     return (
         <>

@@ -88,7 +88,7 @@ body {
         .tabela{
             @apply hidden md:block justify-center items-center mt-10 divide-y w-auto h-96;
         }
-  }
+    }
 
     .menu {
         @apply md:flex md:items-center md:z-auto gap-10;
@@ -96,9 +96,11 @@ body {
         & li{
             @apply text-white hover:underline hover:text-sky-400 my-6 md:my-0;
         }
+    }
     
     .botao {
         @apply font-semibold bg-curious-blue-600 hover:bg-curious-blue-400 hover:shadow-sm text-white text-sm py-1 px-4 rounded-lg float-right md:text-base;
+    }
 
     .main{
         @apply flex flex-col gap-y-6 justify-center items-center row-start-2 min-w-full min-h-full p-6 lg:gap-y-20;
@@ -129,11 +131,11 @@ body {
     }
 
     .secao-form{
-        @apply text-white w-full flex flex-col gap-y-3;
+        @apply text-white flex flex-col gap-y-2 w-full lg:w-11/12 lg:gap-y-7;
     }
 
     .form{
-        @apply space-y-4 lg:w-3/4
+        @apply space-y-4 lg:w-3/4;
     }
 
     .aside-inputs{
@@ -145,7 +147,7 @@ body {
     }
 
     .botao-form{
-        @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded;
     }
 
     .section-cards{
@@ -167,7 +169,43 @@ body {
     .svg-card{
         @apply w-20 h-20 text-bright-turquoise-300 mb-4 lg:w-28 lg:h-28;
     }
+
+    .main-section{
+        @apply text-center flex flex-col gap-y-8;
+    }
+
+    .title{
+        @apply text-2xl font-semibold mb-8 text-white;
+    }
+
+    .cards-section{
+        @apply flex flex-wrap justify-center gap-8;
+    }
+
+    .team-card{
+        @apply bg-white text-gray-900 rounded-lg shadow-md p-6 w-64;
+    }
+
+    .card-section{
+        @apply flex flex-col items-center;
+    }
+
+    .foto{
+        @apply w-auto h-auto bg-gray-300 rounded-full mb-4
+    }
+
+    .nome{
+        @apply text-lg font-semibold text-blue-500
+    }
+
+
+    .link-github{
+        @apply hover:underline mt-8 text-white;
+    }
+
 }
+
+
       
 @layer base {
     input[type="number"]::-webkit-inner-spin-button,
